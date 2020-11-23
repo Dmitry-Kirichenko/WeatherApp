@@ -12,7 +12,7 @@
         <!--Weather View Controller-->
         <scene sceneID="fEU-1m-xth">
             <objects>
-                <viewController id="B4u-nR-UPI" customClass="WeatherViewController" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B4u-nR-UPI" customClass="WeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lrk-GS-V9c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                                 <rect key="frame" x="50" y="0.0" width="235" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAX-BO-rQB">
                                                 <rect key="frame" x="295" y="1" width="40" height="38"/>
@@ -49,6 +49,9 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="B4u-nR-UPI" eventType="touchUpInside" id="l5t-6w-NZU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -111,6 +114,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="SFk-15-8hD" id="YR9-ep-SaA"/>
                         <outlet property="conditionImageView" destination="sQs-eT-caC" id="fZg-1V-mCn"/>
+                        <outlet property="searchTextField" destination="xQz-Oo-MOM" id="IZi-9q-g8K"/>
                         <outlet property="temperatureLabel" destination="2Tc-uB-XvG" id="Eaz-fy-rJI"/>
                     </connections>
                 </viewController>
@@ -125,7 +129,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="weatherColor">
-            <color red="0.098082549869999994" green="0.26281177999999999" blue="0.28423666949999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.097999997437000275" green="0.2630000114440918" blue="0.28400000929832458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
